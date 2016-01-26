@@ -1,15 +1,11 @@
 public class MyClassA extends MyClass<MessageA>
 {
-    public Integer test(Message m)
+    public MyClassA() { super(MessageA.class); }
+    @Override
+    protected Integer do_test(Message m) 
     {
-        if (m instanceof MessageA)
-        {
-            return m.f(7);
-        }
-        else
-        {
-            System.out.println("Bad type.");
-            return 0;
-        }
+        System.out.println("This should be 14 : ");
+        System.out.println(m.f(7));
+        return m.f(7);
     }
 }

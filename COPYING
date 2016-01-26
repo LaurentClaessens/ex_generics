@@ -1,0 +1,16 @@
+This is a small exercise program[1]. The purpose is to implement something like
+
+class MyClass<T extends Base>
+{
+    void test(Base b)
+    {
+        if (b isinstance T)   { do_something();   }
+        else { do_something_else();   }
+    }
+}
+
+As it, it does not work because of the type erasure : the type 'T' is not available at runtime.
+
+
+
+[1]  If you need a licence, take this one :  http://fr.wikipedia.org/wiki/WTFPL
