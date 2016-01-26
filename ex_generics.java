@@ -4,13 +4,14 @@ public class ex_generics
 
   public static void main(String args[]) 
   {
-      System.out.println("hello");
-      //Class<MessageA> type=MessageA.class;
       MyClassA a  = new MyClassA();
+      MyClassB b  = new MyClassB();
 
       MessageA ma=new MessageA();
       MessageB mb=new MessageB();
-      a.test(ma);
-      a.test(mb);
+      System.out.println(  a.test(ma)  ); //14
+      System.out.println( a.test(mb) );  // Bad type
+      System.out.println(  b.test(ma)  ); // Bad type
+      System.out.println(  b.test(mb)  ); // 35
   }
 }
